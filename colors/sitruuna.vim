@@ -1,5 +1,5 @@
-" sitruuna
-" A dark and freshly yellowish color scheme for vim
+" sitruuna.vim
+" A fresh lemon inspired color scheme for vim
 
 " Setup {{{
 set background=dark
@@ -72,13 +72,14 @@ function! s:HL(group, fg, ...)
 endfunction
 " }}}
 
-" highlights {{{
+" Highlights {{{
 call s:HL('Normal'       , 'plain'       , 'none')
 call s:HL('NonText'      , 'red'         , 'black')
 call s:HL('Comment'      , 'comment'     , 'none')
 call s:HL('String'       , 'fresh_green' , 'none')
-call s:HL('CursorLine'   , ''            , 'gray1')
-call s:HL('ColorColumn'  , ''            , 'black')
+call s:HL('CursorLine'   , ''            , 'gray1', 'none')
+call s:HL('CursorColumn' , ''            , 'gray1')
+call s:HL('ColorColumn'  , ''            , 'gray1')
 call s:HL('StatusLine'   , 'gray2'       , 'plain')
 call s:HL('StatusLineNC' , 'gray1'       , 'comment')
 call s:HL('Visual'       , 'lemon'       , 'comment')
@@ -98,35 +99,34 @@ call s:HL('Conditional' , 'lemon' , 'none' , 'bold')
 call s:HL('Label'       , 'lemon' , 'none' , 'bold')
 call s:HL('Repeat'      , 'lemon' , 'none' , 'bold')
 call s:HL('Statement'   , 'lemon' , 'none' , 'bold')
+call s:HL('Operator'    , 'lemon' , 'none' , 'bold')
 
 call s:HL('Delimiter',   'none', 'none')
 
 call s:HL('SpecialKey' , 'orange' , 'none')
 call s:HL('Special'    , 'blonde' , 'none')
 
-call s:HL('PreProc'   , 'blue' , 'none')
-call s:HL('Macro'     , 'blue' , 'none')
-call s:HL('Define'    , 'blue' , 'none')
-call s:HL('PreCondit' , 'blue' , 'none')
-call s:HL('Include'   , 'blue' , 'none')
+call s:HL('PreProc'   , 'cyan' , 'none')
+call s:HL('Macro'     , 'cyan' , 'none')
+call s:HL('Define'    , 'cyan' , 'none')
+call s:HL('PreCondit' , 'cyan' , 'none')
+call s:HL('Include'   , 'cyan' , 'none')
 
 call s:HL('Constant'  , 'magenta' , 'none')
 call s:HL('Boolean'   , 'magenta' , 'none')
 call s:HL('Character' , 'magenta' , 'none')
 call s:HL('Number'    , 'magenta' , 'none')
 call s:HL('Float'     , 'magenta' , 'none')
-
 call s:HL('Exception', 'magenta', 'none')
 
-call s:HL('Error', 'red', 'none', 'none')
-call s:HL('ErrorMsg'     , 'red'    , 'none', 'none')
+call s:HL('Error'    , 'red' , 'none' , 'none')
+call s:HL('ErrorMsg' , 'red' , 'none' , 'none')
 
-call s:HL('Identifier' , 'brown_light' , 'none')
-call s:HL('Function'   , 'brown_light' , 'none')
-call s:HL('Operator'   , 'lemon'       , 'none'  , 'bold')
+call s:HL('Identifier' , 'none' , 'none')
+call s:HL('Function'   , 'plain' , 'none')
 
-call s:HL('Todo', 'black', 'cyan')
-call s:HL('Type', 'cyan')
+call s:HL('Todo' , 'black' , 'blue')
+call s:HL('Type' , 'blue'  , 'none')
 
 call s:HL('Title'        , 'lemon'  , 'none'    , 'bold')
 call s:HL('LineNr'       , 'gray2'  , 'darker')
@@ -136,7 +136,6 @@ call s:HL('SignColumn'   , 'gray2'  , 'darker')
 "
 call s:HL('Conceal' , 'red' , 'none')
 call s:HL('Cursor'  , ''    , 'plain')
-" call s:HL('CursorColumn')
 call s:HL('DiffAdd'     , 'fresh_green' , 'none')
 call s:HL('DiffAdded'   , 'fresh_green' , 'none')
 call s:HL('DiffChange'  , 'lemon'       , 'none')
@@ -153,10 +152,10 @@ call s:HL('PmenuSbar'   , 'gray1'  , 'gray1')
 call s:HL('PmenuSel'    , 'black'  , 'lemon')
 call s:HL('PmenuThumb'  , 'blue')
 call s:HL('Question'    , 'plain'  , 'none')
-call s:HL('SpellBad'    , 'red'    , 'none'   , 'bold')
-call s:HL('SpellCap'    , 'red'    , 'none'   , 'bold')
-call s:HL('SpellLocal'  , 'orange' , 'none'   , 'bold')
-call s:HL('SpellRare'   , 'orange' , 'none'   , 'bold')
+call s:HL('SpellBad'    , 'red'    , 'none'   , 'bold,underline')
+call s:HL('SpellCap'    , 'red'    , 'none'   , 'bold,underline')
+call s:HL('SpellLocal'  , 'orange' , 'none'   , 'bold,underline')
+call s:HL('SpellRare'   , 'orange' , 'none'   , 'bold,underline')
 call s:HL('TabLine'     , 'plain'  , 'gray1'  , 'none')
 call s:HL('TabLineFill' , 'plain'  , 'gray1'  , 'none')
 call s:HL('TabLineSel'  , 'black'  , 'lemon'  , 'bold')
@@ -183,21 +182,42 @@ call s:HL('pythonRun',         'blonde', '', 'bold')
 call s:HL('netrwSymLink' , 'blue' , '')
 " }}}
 
+" HTML {{{
+call s:HL('htmlTagN' , 'plain' , 'none'     )
+call s:HL('htmlTag'  , 'plain' , 'none'     )
+" }}}
+
+" Js {{{
+call s:HL('jsStorageClass'   , 'lemon'   , ''  , 'bold')
+call s:HL('jsThis'           , 'magenta' , '')
+call s:HL('jsUndefined'      , 'magenta' , '')
+call s:HL('jsObjectKey'      , 'blonde'  , '')
+call s:HL('jsTemplateBraces' , 'orange'  , '')
+call s:HL('jsxBraces'        , 'orange'  , '')
+call s:HL('jsxCloseString'   , 'brown'   , '')
+call s:HL('jsxComponentName' , 'brown'   , '')
+" }}}
+
 " Haskell {{{
-call s:HL('haskellDecl'        , 'lemon'       , ''  , 'bold')
-call s:HL('haskellDeclKeyword' , 'lemon'       , ''  , 'bold')
-call s:HL('haskellWhere'       , 'lemon'       , ''  , 'bold')
-call s:HL('haskellType'        , 'brown_light' , '')
-call s:HL('haskellIdentifier'  , 'plain'       , '')
-call s:HL('haskellOperators'   , 'plain'       , '')
-call s:HL('haskellDerive'      , 'blue'        , '')
+call s:HL('haskellDecl'        , 'lemon'  , ''  , 'bold')
+call s:HL('haskellDeclKeyword' , 'lemon'  , ''  , 'bold')
+call s:HL('haskellWhere'       , 'lemon'  , ''  , 'bold')
+call s:HL('haskellType'        , 'blue'   , '')
+call s:HL('haskellIdentifier'  , 'plain'  , '')
+call s:HL('haskellOperators'   , 'plain'  , '')
+call s:HL('haskellDerive'      , 'blonde' , '')
+" }}}
+
+" YAML {{{
+call s:HL('yamlKey'    , 'lemon'  , 'none'  , 'bold')
+call s:HL('yamlInline' , 'orange' , 'none')
 " }}}
 
 " Neomake {{{
-call s:HL('NeomakeErrorSign', 'red')
-call s:HL('NeomakeWarningSign', 'lemon')
-call s:HL('NeomakeMessageSign', 'plain')
-call s:HL('NeomakeInfoSign', 'blue')
+call s:HL('NeomakeErrorSign'   , 'red')
+call s:HL('NeomakeWarningSign' , 'lemon')
+call s:HL('NeomakeMessageSign' , 'plain')
+call s:HL('NeomakeInfoSign'    , 'blue')
 " }}}
 
 " }}}
