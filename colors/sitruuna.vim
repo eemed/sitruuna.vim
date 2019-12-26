@@ -220,4 +220,9 @@ call s:HL('NeomakeMessageSign' , 'plain')
 call s:HL('NeomakeInfoSign'    , 'blue')
 " }}}
 
+" Fugitive {{{
+call s:HL('fugitiveHash'       , 'magenta'       , 'none')
+" }}}
+
+
 " }}}
