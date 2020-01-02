@@ -210,6 +210,10 @@ call s:HL('haskellOperators'  , 'plain' , '')
 call s:HL('haskellDerive'     , 'blonde', '')
 " }}}
 
+" XML {{{
+call s:HL('xmlTagName'   , 'lemon' , 'none' , 'bold')
+" }}}
+
 " YAML {{{
 call s:HL('yamlKey'   , 'lemon' , 'none' , 'bold')
 call s:HL('yamlInline', 'orange', 'none')
