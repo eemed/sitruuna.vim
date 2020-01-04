@@ -74,7 +74,7 @@ endfunction
 
 " Highlights {{{
 " General {{{
-call s:HL('Normal'      , 'plain'      , 'none')
+call s:HL('Normal'      , 'plain'      , 'black')
 call s:HL('NonText'     , 'red'        , 'black')
 call s:HL('Comment'     , 'comment'    , 'none')
 call s:HL('String'      , 'fresh_green', 'none')
