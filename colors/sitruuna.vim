@@ -73,161 +73,138 @@ endfunction
 " }}}
 
 " Highlights {{{
-" General {{{
-call s:HL('Normal'      , 'plain'      , 'black')
-call s:HL('NonText'     , 'red'        , 'black')
-call s:HL('Comment'     , 'comment'    , 'none')
-call s:HL('String'      , 'fresh_green', 'none')
-call s:HL('CursorLine'  , ''           , 'gray1'   , 'none')
-call s:HL('CursorColumn', ''           , 'gray1')
-call s:HL('ColorColumn' , ''           , 'gray1')
-call s:HL('StatusLine'  , 'gray2'      , 'plain')
-call s:HL('StatusLineNC', 'gray1'      , 'comment')
-call s:HL('Visual'      , 'lemon'      , 'comment')
-call s:HL('VisualNOS'   , 'plain'      , 'black')
-call s:HL('FoldColumn'  , 'gray2'      , 'darker')
-call s:HL('Folded'      , 'comment'    , 'none')
-call s:HL('MatchParen'  , 'orange'     , 'none'    , 'bold')
+call s:HL('Normal'         , 'plain'      , 'black')
+call s:HL('NonText'        , 'red'        , 'black')
+call s:HL('EndOfBuffer'    , 'gray2')
+call s:HL('LineNr'         , 'gray2'      , 'darker')
+call s:HL('FoldColumn'     , 'gray2'      , 'darker')
+call s:HL('Folded'         , 'comment'    , 'none')
+call s:HL('MatchParen'     , 'orange'     , 'none'    , 'bold')
+call s:HL('SignColumn'     , 'gray2'      , 'darker')
+call s:HL('Comment'        , 'comment'    , 'none')
+call s:HL('Conceal'        , 'red'        , 'none')
+call s:HL('Constant'       , 'magenta'    , 'none')
+call s:HL('Error'          , 'red'        , 'none'    , 'none')
+call s:HL('Identifier'     , 'none'       , 'none')
+call s:HL('Ignore'         , 'comment'    , 'none')
+call s:HL('PreProc'        , 'cyan'       , 'none')
+call s:HL('Special'        , 'blonde'     , 'none')
+call s:HL('Statement'      , 'lemon'      , 'none'    , 'bold')
+call s:HL('String'         , 'fresh_green', 'none')
+call s:HL('Todo'           , 'black'      , 'blue')
+call s:HL('Type'           , 'blue'       , 'none')
+call s:HL('Underlined'     , 'blonde'     , 'none')
+call s:HL('Pmenu'          , 'plain'      , 'gray1')
+call s:HL('PmenuSbar'      , 'gray1'      , 'gray1')
+call s:HL('PmenuSel'       , 'black'      , 'lemon')
+call s:HL('PmenuThumb'     , 'blue')
+call s:HL('ErrorMsg'       , 'red'        , 'none'    , 'none')
+call s:HL('ModeMsg'        , 'orange'     , 'none')
+call s:HL('MoreMsg'        , 'blonde'     , 'none')
+call s:HL('Question'       , 'plain'      , 'none')
+call s:HL('WarningMsg'     , 'lemon'      , 'none')
+call s:HL('TabLine'        , 'plain'      , 'gray1'   , 'none')
+call s:HL('TabLineFill'    , 'plain'      , 'gray1'   , 'none')
+call s:HL('TabLineSel'     , 'black'      , 'lemon'   , 'bold')
+call s:HL('Cursor'         , ''           , 'plain')
+call s:HL('CursorColumn'   , ''           , 'gray1')
+call s:HL('CursorLineNr'   , 'orange'     , 'darker')
+call s:HL('CursorLine'     , ''           , 'gray1'   , 'none')
+call s:HL('StatusLine'     , 'gray2'      , 'plain')
+call s:HL('StatusLineNC'   , 'gray1'      , 'comment')
+call s:HL('Visual'         , 'lemon'      , 'comment')
+call s:HL('VisualNOS'      , 'plain'      , 'black')
+call s:HL('VertSplit'      , 'gray1'      , 'gray1')
+call s:HL('WildMenu'       , 'plain'      , 'black')
+call s:HL('Function'       , 'plain'      , 'none')
+call s:HL('SpecialKey'     , 'orange'     , 'none')
+call s:HL('Title'          , 'lemon'      , 'none'    , 'bold')
+call s:HL('DiffAdd'        , 'fresh_green', 'none')
+call s:HL('DiffChange'     , 'lemon'      , 'none')
+call s:HL('DiffDelete'     , 'red'        , 'none')
+call s:HL('DiffText'       , 'blue'       , 'none')
+call s:HL('IncSearch'      , 'lemon'      , 'black')
+call s:HL('Search'         , 'lemon'      , 'black')
+call s:HL('Substitute'     , 'lemon'      , 'black')
+call s:HL('Directory'      , 'lemon'      , 'none')
+call s:HL('debugPC'        , 'red'        , 'none')
+call s:HL('debugBreakpoint', 'red'        , 'none')
+call s:HL('SpellBad'       , 'red'        , 'none'    , 'bold,underline')
+call s:HL('SpellCap'       , 'red'        , 'none'    , 'bold,underline')
+call s:HL('SpellLocal'     , 'orange'     , 'none'    , 'bold,underline')
+call s:HL('SpellRare'      , 'orange'     , 'none'    , 'bold,underline')
+call s:HL('ColorColumn'    , ''           , 'gray1')
+call s:HL('Delimiter'      , 'none'       , 'none')
 
-" Searching
-call s:HL('IncSearch' , 'lemon', 'black')
-call s:HL('Search'    , 'lemon', 'black')
-call s:HL('Substitute', 'lemon', 'black' , 'bold')
+hi link Terminal Normal
+hi link Number Constant
+hi link CursorIM Cursor
+hi link Boolean Constant
+hi link Character Constant
+hi link Conditional Statement
+hi link Debug Special
+hi link Define PreProc
+hi link Exception Statement
+hi link Float Number
+hi link HelpCommand Statement
+hi link HelpExample Statement
+hi link Include PreProc
+hi link Keyword Statement
+hi link Label Statement
+hi link Macro PreProc
+hi link Number Constant
+hi link Operator Statement
+hi link PreCondit PreProc
+hi link Repeat Statement
+hi link SpecialChar Special
+hi link SpecialComment Special
+hi link StorageClass Statement
+hi link Structure Statement
+hi link Tag Special
+hi link Terminal Normal
+hi link Typedef Statement
+hi link htmlEndTag htmlTagName
+hi link htmlLink Function
+hi link htmlSpecialTagName htmlTagName
+hi link htmlTag htmlTagName
+hi link htmlBold Normal
+hi link htmlItalic Normal
+hi link xmlTag Statement
+hi link xmlTagName Statement
+hi link xmlEndTag Statement
+hi link markdownItalic Preproc
+hi link asciidocQuotedEmphasized Preproc
+hi link diffBDiffer WarningMsg
+hi link diffCommon WarningMsg
+hi link diffDiffer WarningMsg
+hi link diffIdentical WarningMsg
+hi link diffIsA WarningMsg
+hi link diffNoEOL WarningMsg
+hi link diffOnly WarningMsg
+hi link diffRemoved DiffDelete
+hi link diffAdded DiffAdd
+hi link QuickFixLine Search
+hi link ConId Type
 
-" Usual highlighting
-call s:HL('Keyword'    , 'lemon', 'none', 'bold')
-call s:HL('Conditional', 'lemon', 'none', 'bold')
-call s:HL('Label'      , 'lemon', 'none', 'bold')
-call s:HL('Repeat'     , 'lemon', 'none', 'bold')
-call s:HL('Statement'  , 'lemon', 'none', 'bold')
-call s:HL('Operator'   , 'lemon', 'none', 'bold')
+" Yaml
+hi link yamlBlockMappingKey Statement
+hi link yamlFlowIndicator SpecialKey
 
-call s:HL('Delimiter', 'none', 'none')
+" Markdown
+hi link markdownCode String
+hi link markdownHeadingDelimiter Type
+hi link markdownLinkText Special
 
-call s:HL('SpecialKey', 'orange', 'none')
-call s:HL('Special'   , 'blonde', 'none')
+" CSS
+hi link cssTagName SpecialKey
+hi link cssClassName Statement
+hi link cssDefinition Special
+hi link cssProp Special
 
-call s:HL('PreProc'  , 'cyan', 'none')
-call s:HL('Macro'    , 'cyan', 'none')
-call s:HL('Define'   , 'cyan', 'none')
-call s:HL('PreCondit', 'cyan', 'none')
-call s:HL('Include'  , 'cyan', 'none')
+" Fugitive
+hi link fugitiveHash Constant
 
-call s:HL('Constant' , 'magenta', 'none')
-call s:HL('Boolean'  , 'magenta', 'none')
-call s:HL('Character', 'magenta', 'none')
-call s:HL('Number'   , 'magenta', 'none')
-call s:HL('Float'    , 'magenta', 'none')
-call s:HL('Exception', 'magenta', 'none')
-
-call s:HL('Error'   , 'red', 'none', 'none')
-call s:HL('ErrorMsg', 'red', 'none', 'none')
-
-call s:HL('Identifier', 'none' , 'none')
-call s:HL('Function'  , 'plain', 'none')
-
-call s:HL('Todo', 'black', 'blue')
-call s:HL('Type', 'blue' , 'none')
-
-call s:HL('Title'       , 'lemon' , 'none'   , 'bold')
-call s:HL('LineNr'      , 'gray2' , 'darker')
-call s:HL('CursorLineNr', 'orange', 'darker')
-call s:HL('VertSplit'   , 'gray1' , 'gray1')
-call s:HL('SignColumn'  , 'gray2' , 'darker')
-"
-call s:HL('Conceal'    , 'red'        , 'none')
-call s:HL('Cursor'     , ''           , 'plain')
-call s:HL('DiffAdd'    , 'fresh_green', 'none')
-call s:HL('DiffAdded'  , 'fresh_green', 'none')
-call s:HL('DiffChange' , 'lemon'      , 'none')
-call s:HL('DiffDelete' , 'red'        , 'none')
-call s:HL('DiffRemoved', 'red'        , 'none')
-call s:HL('DiffText'   , 'blue'       , 'none')
-
-call s:HL('Directory'  , 'lemon' , 'none')
-call s:HL('EndOfBuffer', 'gray2')
-call s:HL('ModeMsg'    , 'orange', 'none')
-call s:HL('MoreMsg'    , 'blonde', 'none')
-call s:HL('Pmenu'      , 'plain' , 'gray1')
-call s:HL('PmenuSbar'  , 'gray1' , 'gray1')
-call s:HL('PmenuSel'   , 'black' , 'lemon')
-call s:HL('PmenuThumb' , 'blue')
-call s:HL('Question'   , 'plain' , 'none')
-call s:HL('SpellBad'   , 'red'   , 'none'  , 'bold,underline')
-call s:HL('SpellCap'   , 'red'   , 'none'  , 'bold,underline')
-call s:HL('SpellLocal' , 'orange', 'none'  , 'bold,underline')
-call s:HL('SpellRare'  , 'orange', 'none'  , 'bold,underline')
-call s:HL('TabLine'    , 'plain' , 'gray1' , 'none')
-call s:HL('TabLineFill', 'plain' , 'gray1' , 'none')
-call s:HL('TabLineSel' , 'black' , 'lemon' , 'bold')
-call s:HL('WarningMsg' , 'lemon' , 'none')
-call s:HL('WildMenu'   , 'plain' , 'black')
-" call s:HL('Ignore')
-call s:HL('Underlined', 'blonde', 'none')
-" call s:HL('CursorIM')
-" }}}
-
-" Python {{{
-" call s:HL('pythonBuiltin'    , 'dress')
-" call s:HL('pythonBuiltinObj' , 'dress')
-" call s:HL('pythonBuiltinFunc', 'dress')
-" call s:HL('pythonEscape'     , 'dress')
-" call s:HL('pythonException'  , 'lime'  , '', 'bold')
-" call s:HL('pythonExceptions' , 'lime'  , '', 'none')
-" call s:HL('pythonPrecondit'  , 'lime'  , '', 'none')
-" call s:HL('pythonDecorator'  , 'taffy' , '', 'none')
-" call s:HL('pythonCoding'     , 'gravel', '', 'bold')
-call s:HL('pythonRun',         'blonde', '', 'bold')
-" }}}
-
-" Netrw {{{
-call s:HL('netrwSymLink', 'blue', '')
-" }}}
-
-" HTML {{{
-call s:HL('htmlTagN', 'plain', 'none')
-call s:HL('htmlTag' , 'plain', 'none')
-" }}}
-
-" Js {{{
-call s:HL('jsStorageClass'  , 'lemon'  , 'none' , 'bold')
-call s:HL('jsThis'          , 'magenta', 'none')
-call s:HL('jsUndefined'     , 'magenta', 'none')
-call s:HL('jsObjectKey'     , 'blonde' , 'none')
-call s:HL('jsTemplateBraces', 'orange' , 'none')
-call s:HL('jsxBraces'       , 'orange' , 'none')
-call s:HL('jsxCloseString'  , 'brown'  , 'none')
-call s:HL('jsxComponentName', 'brown'  , 'none')
-" }}}
-
-" Haskell {{{
-call s:HL('haskellDecl'       , 'lemon' , '' , 'bold')
-call s:HL('haskellDeclKeyword', 'lemon' , '' , 'bold')
-call s:HL('haskellWhere'      , 'lemon' , '' , 'bold')
-call s:HL('haskellType'       , 'blue'  , '')
-call s:HL('haskellIdentifier' , 'plain' , '')
-call s:HL('haskellOperators'  , 'plain' , '')
-call s:HL('haskellDerive'     , 'blonde', '')
-" }}}
-
-" YAML {{{
-call s:HL('yamlKey'   , 'lemon' , 'none' , 'bold')
-call s:HL('yamlInline', 'orange', 'none')
-" }}}
-
-" CSS {{{
-call s:HL('cssClassName', 'lemon' , 'none' , 'bold')
-call s:HL('cssTagName'  , 'orange', 'none')
-" }}}
-
-" Neomake {{{
-call s:HL('NeomakeErrorSign'  , 'red')
-call s:HL('NeomakeWarningSign', 'lemon')
-call s:HL('NeomakeMessageSign', 'plain')
-call s:HL('NeomakeInfoSign'   , 'blue')
-" }}}
-
-" Fugitive {{{
-call s:HL('fugitiveHash', 'magenta', 'none')
-" }}}
+" 'MaxMEllon/vim-jsx-pretty'
+hi link jsxComponentName Statement
+hi link jsxTagName Special
 " }}}
