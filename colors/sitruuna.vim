@@ -1,5 +1,5 @@
 " sitruuna.vim
-" A fresh lemon inspired color scheme for vim
+" A fresh lemon inspired colorscheme for vim
 
 " Setup {{{
 set background=dark
