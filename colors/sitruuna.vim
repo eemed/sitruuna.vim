@@ -11,26 +11,24 @@ let g:colors_name="sitruuna"
 " }}}
 
 " Colors {{{
-let s:col = {}
-let s:col.plain       = ['#f1f1f1', 255]
-let s:col.lemon       = ['#FAC03B', 220]
-let s:col.darker      = ['#101010', 0]
-let s:col.black       = ['#161616', 233]
-let s:col.gray1       = ['#1D2021', 236]
-let s:col.gray2       = ['#2D3032', 238]
-let s:col.comment     = ['#4c5356', 244]
-let s:col.selection   = ['#A89984', 245]
-let s:col.orange      = ['#FB543F', 202]
-let s:col.cyan        = ['#20b2aa', 37]
-let s:col.blue        = ['#54a0ff', 69]
-let s:col.fresh_green = ['#2ecc71', 78]
-let s:col.green       = ['#95C085', 77]
-let s:col.magenta     = ['#ca70d6', 164]
-let s:col.red         = ['#e74c3c', 196]
-let s:col.none        = ['NONE', 'NONE']
-let s:col.blonde      = ['#d3d6a9', 230]
-let s:col.brown_light = ['#ad9c91', 230]
-let s:col.brown       = ['#8e7f76', 230]
+let s:col              = {}
+let s:col.foreground   = ['#f1f1f1', 255]
+let s:col.lemon        = ['#FAC03B', 220]
+let s:col.darker       = ['#101010', 0]
+let s:col.background   = ['#161616', 233]
+let s:col.light_bg     = ['#1D2021', 236]
+let s:col.lighter_bg   = ['#2D3032', 238]
+let s:col.comment      = ['#4c5356', 244]
+let s:col.selection    = ['#4c5356', 245]
+let s:col.special      = ['#FB543F', 202]
+let s:col.preproc      = ['#54a0ff', 69]
+let s:col.function     = ['#d3d6a9', 69]
+let s:col.identifier   = ['#94d0ff', 69]
+let s:col.string       = ['#2ecc71', 78]
+let s:col.type         = ['#95C085', 77]
+let s:col.constant     = ['#ca70d6', 164]
+let s:col.red          = ['#e74c3c', 196]
+let s:col.none         = ['NONE', 'NONE']
 " }}}
 
 " Highlighting Function from https://github.com/sjl/badwolf {{{
@@ -73,68 +71,69 @@ endfunction
 " }}}
 
 " Highlights {{{
-call s:HL('Normal'         , 'plain'      , 'black')
-call s:HL('NonText'        , 'red'        , 'black')
-call s:HL('EndOfBuffer'    , 'gray2')
-call s:HL('LineNr'         , 'gray2'      , 'darker')
-call s:HL('FoldColumn'     , 'gray2'      , 'darker')
+call s:HL('Normal'         , 'foreground'      , 'background')
+call s:HL('NonText'        , 'red'        , 'background')
+call s:HL('EndOfBuffer'    , 'lighter_bg')
+call s:HL('LineNr'         , 'lighter_bg'      , 'darker')
+call s:HL('FoldColumn'     , 'lighter_bg'      , 'darker')
 call s:HL('Folded'         , 'comment'    , 'none')
-call s:HL('MatchParen'     , 'orange'     , 'none'    , 'bold')
-call s:HL('SignColumn'     , 'gray2'      , 'darker')
+call s:HL('MatchParen'     , 'special'     , 'none'    , 'bold')
+call s:HL('SignColumn'     , 'lighter_bg'      , 'darker')
 call s:HL('Comment'        , 'comment'    , 'none')
 call s:HL('Conceal'        , 'red'        , 'none')
-call s:HL('Constant'       , 'magenta'    , 'none')
+call s:HL('Constant'       , 'constant'    , 'none')
 call s:HL('Error'          , 'red'        , 'none'    , 'none')
-call s:HL('Identifier'     , 'none'       , 'none')
+call s:HL('Identifier'     , 'identifier' , 'none')
 call s:HL('Ignore'         , 'comment'    , 'none')
-call s:HL('PreProc'        , 'cyan'       , 'none')
-call s:HL('Special'        , 'blonde'     , 'none')
+call s:HL('PreProc'        , 'preproc'       , 'none')
+call s:HL('Special'        , 'special'     , 'none')
 call s:HL('Statement'      , 'lemon'      , 'none'    , 'bold')
-call s:HL('String'         , 'fresh_green', 'none')
-call s:HL('Todo'           , 'black'      , 'blue')
-call s:HL('Type'           , 'blue'       , 'none')
-call s:HL('Underlined'     , 'blonde'     , 'none')
-call s:HL('Pmenu'          , 'plain'      , 'gray1')
-call s:HL('PmenuSbar'      , 'gray1'      , 'gray1')
-call s:HL('PmenuSel'       , 'black'      , 'lemon')
-call s:HL('PmenuThumb'     , 'blue')
+call s:HL('String'         , 'string', 'none')
+call s:HL('Todo'           , 'background'      , 'function')
+call s:HL('Type'           , 'type', 'none'    , 'none')
+call s:HL('Underlined'     , 'function'     , 'none')
+call s:HL('Pmenu'          , 'foreground'      , 'light_bg')
+call s:HL('PmenuSbar'      , 'light_bg'      , 'light_bg')
+call s:HL('PmenuSel'       , 'background'      , 'lemon')
+call s:HL('PmenuThumb'     , 'function')
 call s:HL('ErrorMsg'       , 'red'        , 'none'    , 'none')
-call s:HL('ModeMsg'        , 'orange'     , 'none')
-call s:HL('MoreMsg'        , 'blonde'     , 'none')
-call s:HL('Question'       , 'plain'      , 'none')
+call s:HL('ModeMsg'        , 'special'     , 'none')
+call s:HL('MoreMsg'        , 'function'     , 'none')
+call s:HL('Question'       , 'foreground'      , 'none')
 call s:HL('WarningMsg'     , 'lemon'      , 'none')
-call s:HL('TabLine'        , 'plain'      , 'gray1'   , 'none')
-call s:HL('TabLineFill'    , 'plain'      , 'gray1'   , 'none')
-call s:HL('TabLineSel'     , 'black'      , 'lemon'   , 'bold')
-call s:HL('Cursor'         , ''           , 'plain')
-call s:HL('CursorColumn'   , ''           , 'gray1')
-call s:HL('CursorLineNr'   , 'orange'     , 'darker')
-call s:HL('CursorLine'     , ''           , 'gray1'   , 'none')
-call s:HL('StatusLine'     , 'gray2'      , 'plain')
-call s:HL('StatusLineNC'   , 'gray1'      , 'comment')
-call s:HL('Visual'         , 'lemon'      , 'comment')
-call s:HL('VisualNOS'      , 'plain'      , 'black')
-call s:HL('VertSplit'      , 'gray1'      , 'gray1')
-call s:HL('WildMenu'       , 'plain'      , 'black')
-call s:HL('Function'       , 'plain'      , 'none')
-call s:HL('SpecialKey'     , 'orange'     , 'none')
+call s:HL('TabLine'        , 'foreground'      , 'light_bg'   , 'none')
+call s:HL('TabLineFill'    , 'foreground'      , 'light_bg'   , 'none')
+call s:HL('TabLineSel'     , 'background'      , 'lemon'   , 'bold')
+call s:HL('Cursor'         , ''           , 'foreground')
+call s:HL('CursorColumn'   , ''           , 'light_bg')
+call s:HL('CursorLineNr'   , 'special'     , 'darker')
+call s:HL('CursorLine'     , ''           , 'light_bg'   , 'none')
+call s:HL('StatusLine'     , 'lighter_bg'      , 'foreground')
+call s:HL('StatusLineNC'   , 'light_bg'      , 'comment')
+call s:HL('Visual'         , 'lemon'      , 'selection')
+call s:HL('VisualNOS'      , 'foreground'      , 'background')
+call s:HL('VertSplit'      , 'light_bg'      , 'light_bg')
+call s:HL('WildMenu'       , 'foreground'      , 'background')
+call s:HL('Function'       , 'function'       , 'none'    , 'none')
+call s:HL('SpecialKey'     , 'special'     , 'none')
 call s:HL('Title'          , 'lemon'      , 'none'    , 'bold')
-call s:HL('DiffAdd'        , 'fresh_green', 'none')
+call s:HL('DiffAdd'        , 'string', 'none')
 call s:HL('DiffChange'     , 'lemon'      , 'none')
 call s:HL('DiffDelete'     , 'red'        , 'none')
-call s:HL('DiffText'       , 'blue'       , 'none')
-call s:HL('IncSearch'      , 'lemon'      , 'black')
-call s:HL('Search'         , 'lemon'      , 'black')
-call s:HL('Substitute'     , 'lemon'      , 'black')
+call s:HL('DiffText'       , 'function'       , 'none')
 call s:HL('Directory'      , 'lemon'      , 'none')
 call s:HL('debugPC'        , 'red'        , 'none')
 call s:HL('debugBreakpoint', 'red'        , 'none')
+call s:HL('ColorColumn'    , ''           , 'light_bg')
+call s:HL('Delimiter'      , 'none'       , 'none')
+
+call s:HL('IncSearch'      , 'lemon'      , 'background', 'reverse,bold')
+call s:HL('Search'         , 'lemon'      , 'background', 'reverse,bold')
+call s:HL('Substitute'     , 'lemon'      , 'background', 'reverse,bold')
 call s:HL('SpellBad'       , 'red'        , 'none'    , 'bold,underline')
 call s:HL('SpellCap'       , 'red'        , 'none'    , 'bold,underline')
-call s:HL('SpellLocal'     , 'orange'     , 'none'    , 'bold,underline')
-call s:HL('SpellRare'      , 'orange'     , 'none'    , 'bold,underline')
-call s:HL('ColorColumn'    , ''           , 'gray1')
-call s:HL('Delimiter'      , 'none'       , 'none')
+call s:HL('SpellLocal'     , 'special'     , 'none'    , 'bold,underline')
+call s:HL('SpellRare'      , 'special'     , 'none'    , 'bold,underline')
 
 hi link Terminal Normal
 hi link Number Constant
@@ -172,7 +171,6 @@ hi link htmlItalic Normal
 hi link xmlTag Statement
 hi link xmlTagName Statement
 hi link xmlEndTag Statement
-hi link markdownItalic Preproc
 hi link asciidocQuotedEmphasized Preproc
 hi link diffBDiffer WarningMsg
 hi link diffCommon WarningMsg
@@ -192,8 +190,10 @@ hi link yamlFlowIndicator SpecialKey
 
 " Markdown
 hi link markdownCode String
+hi link markdownCodeBlock String
 hi link markdownHeadingDelimiter Type
 hi link markdownLinkText Special
+hi link markdownItalic Preproc
 
 " CSS
 hi link cssTagName SpecialKey
@@ -203,6 +203,9 @@ hi link cssProp Special
 
 " Fugitive
 hi link fugitiveHash Constant
+
+" Python
+hi link pythonBuiltin Constant
 
 " 'MaxMEllon/vim-jsx-pretty'
 hi link jsxComponentName Statement
