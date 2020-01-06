@@ -126,6 +126,7 @@ call s:HL('debugPC',         'error',      'none')
 call s:HL('debugBreakpoint', 'error',      'none')
 call s:HL('ColorColumn',     'none',       'light_bg')
 call s:HL('Delimiter',       'none',       'none')
+call s:HL('Operator',        'foreground', 'none')
 
 call s:HL('IncSearch',  'lemon',   'background', 'reverse,bold')
 call s:HL('Search',     'lemon',   'background', 'reverse,bold')
@@ -152,7 +153,6 @@ hi link Keyword                  Statement
 hi link Label                    Statement
 hi link Macro                    PreProc
 hi link Number                   Constant
-hi link Operator                 Statement
 hi link PreCondit                PreProc
 hi link Repeat                   Statement
 hi link SpecialChar              Special
