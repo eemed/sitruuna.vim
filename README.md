@@ -17,21 +17,22 @@ and execute `PlugInstall`.
 
 ## Colors
 
-| Usage      | color hex |
-| ---        | ---       |
-| foreground | #f1f1f1   |
-| lemon      | #FAC03B   |
-| darker     | #101010   |
-| background | #161616   |
-| light_bg   | #1D2021   |
-| lighter_bg | #2D3032   |
-| comment    | #4c5356   |
-| selection  | #4c5356   |
-| special    | #FB543F   |
-| preproc    | #54a0ff   |
-| function   | #d3d6a9   |
-| identifier | #94d0ff   |
-| string     | #2ecc71   |
-| type       | #95C085   |
-| constant   | #ca70d6   |
-| error      | #e74c3c   |
+
+|   Usage    | color hex |
+|    ---     |    ---    |
+| foreground |  #f1f1f1  |
+|   lemon    |  #FAC03B  |
+|   darker   |  #101010  |
+| background |  #161616  |
+|  light_bg  |  #1D2021  |
+| lighter_bg |  #2D3032  |
+|  comment   |  #4c5356  |
+| selection  |  #2D3032  |
+|  special   |  #ffb354  |
+|  preproc   |  #a29bfe  |
+|  function  |  #94d0ff  |
+| identifier |  #f1f1f1  |
+|   string   |  #26c281  |
+|    type    |  #65a9ff  |
+|  constant  |  #ca70d6  |
+|   error    |  #FB543F  |
