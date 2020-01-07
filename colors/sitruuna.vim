@@ -126,7 +126,11 @@ call s:HL('debugPC',         'error',      'none')
 call s:HL('debugBreakpoint', 'error',      'none')
 call s:HL('ColorColumn',     'none',       'light_bg')
 call s:HL('Delimiter',       'none',       'none')
-call s:HL('Operator',        'foreground', 'none')
+call s:HL('Operator',        'lemon', 'none', 'bold')
+call s:HL('htmlTagName',     'lemon',      'none',     'bold')
+call s:HL('htmlTag',         'foreground', 'none')
+call s:HL('htmlArg',         'function',   'none')
+
 
 call s:HL('IncSearch',  'lemon',   'background', 'reverse,bold')
 call s:HL('Search',     'lemon',   'background', 'reverse,bold')
