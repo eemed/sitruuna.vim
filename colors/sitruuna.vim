@@ -20,14 +20,14 @@ let s:col.light_bg   = ['#1D2021', 236]
 let s:col.lighter_bg = ['#2D3032', 238]
 let s:col.comment    = ['#4c5356', 244]
 let s:col.selection  = ['#2D3032', 245]
-let s:col.special    = ['#FB543F', 202]
-let s:col.preproc    = ['#54a0ff', 69]
-let s:col.function   = ['#d3d6a9', 69]
-let s:col.identifier = ['#94d0ff', 69]
-let s:col.string     = ['#2ecc71', 78]
-let s:col.type       = ['#95C085', 77]
+let s:col.special    = ['#ffb354', 202]
+let s:col.preproc    = ['#a29bfe', 69]
+let s:col.function   = ['#94d0ff', 255]
+let s:col.identifier = ['#f1f1f1', 69]
+let s:col.string     = ['#26c281', 78]
+let s:col.type       = ['#65a9ff', 77]
 let s:col.constant   = ['#ca70d6', 164]
-let s:col.error      = ['#e74c3c', 196]
+let s:col.error      = ['#FB543F', 196]
 let s:col.none       = ['NONE', 'NONE']
 " }}}
 
@@ -72,7 +72,7 @@ endfunction
 
 " Highlights {{{
 call s:HL('Normal',          'foreground', 'background')
-call s:HL('NonText',         'error',      'background')
+call s:HL('NonText',         'comment',    'background')
 call s:HL('EndOfBuffer',     'lighter_bg')
 call s:HL('LineNr',          'lighter_bg', 'darker')
 call s:HL('FoldColumn',      'lighter_bg', 'darker')
@@ -89,7 +89,7 @@ call s:HL('PreProc',         'preproc',    'none')
 call s:HL('Special',         'special',    'none')
 call s:HL('Statement',       'lemon',      'none',     'bold')
 call s:HL('String',          'string',     'none')
-call s:HL('Todo',            'background', 'function')
+call s:HL('Todo',            'background', 'string')
 call s:HL('Type',            'type',       'none',     'none')
 call s:HL('Underlined',      'function',   'none')
 call s:HL('Pmenu',           'foreground', 'light_bg')
