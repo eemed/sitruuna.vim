@@ -103,12 +103,12 @@ call s:HL('Question',        'foreground', 'none')
 call s:HL('WarningMsg',      'lemon',      'none')
 call s:HL('TabLine',         'foreground', 'light_bg', 'none')
 call s:HL('TabLineFill',     'foreground', 'light_bg', 'none')
-call s:HL('TabLineSel',      'background', 'lemon',    'bold')
+call s:HL('TabLineSel',      'background', 'special',  'bold')
 call s:HL('Cursor',          'none',       'foreground')
 call s:HL('CursorColumn',    'none',       'light_bg')
 call s:HL('CursorLineNr',    'special',    'darker')
 call s:HL('CursorLine',      'none',       'light_bg', 'none')
-call s:HL('StatusLine',      'lighter_bg', 'foreground')
+call s:HL('StatusLine',      'special',    'background')
 call s:HL('StatusLineNC',    'light_bg',   'comment')
 call s:HL('Visual',          'none',       'selection')
 call s:HL('VisualNOS',       'foreground', 'background')
@@ -126,7 +126,7 @@ call s:HL('debugPC',         'error',      'none')
 call s:HL('debugBreakpoint', 'error',      'none')
 call s:HL('ColorColumn',     'none',       'light_bg')
 call s:HL('Delimiter',       'none',       'none')
-call s:HL('Operator',        'lemon', 'none', 'bold')
+call s:HL('Operator',        'lemon',      'none',     'bold')
 call s:HL('htmlTagName',     'lemon',      'none',     'bold')
 call s:HL('htmlTag',         'foreground', 'none')
 call s:HL('htmlArg',         'function',   'none')
@@ -194,6 +194,7 @@ hi link yamlFlowIndicator   SpecialKey
 
 " Markdown
 hi link markdownCode             String
+hi link markdownCodeDelimiter    String
 hi link markdownCodeBlock        String
 hi link markdownHeadingDelimiter Type
 hi link markdownLinkText         Special
