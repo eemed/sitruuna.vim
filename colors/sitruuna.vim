@@ -74,7 +74,7 @@ endfunction
 call s:HL('Normal',          'foreground', 'background')
 call s:HL('NonText',         'comment',    'background')
 call s:HL('EndOfBuffer',     'lighter_bg')
-call s:HL('LineNr',          'lighter_bg', 'darker')
+call s:HL('LineNr',          'comment', 'darker')
 call s:HL('FoldColumn',      'lighter_bg', 'darker')
 call s:HL('Folded',          'comment',    'none')
 call s:HL('MatchParen',      'special',    'none',     'bold')
@@ -132,9 +132,9 @@ call s:HL('htmlTag',         'foreground', 'none')
 call s:HL('htmlArg',         'function',   'none')
 
 
-call s:HL('IncSearch',  'lemon',   'background', 'reverse,bold')
-call s:HL('Search',     'lemon',   'background', 'reverse,bold')
-call s:HL('Substitute', 'lemon',   'background', 'reverse,bold')
+call s:HL('IncSearch',  'type',   'background', 'reverse,bold')
+call s:HL('Search',     'type',   'background', 'reverse,bold')
+call s:HL('Substitute', 'type',   'background', 'reverse,bold')
 call s:HL('SpellBad',   'error',   'none',       'bold,underline')
 call s:HL('SpellCap',   'error',   'none',       'bold,underline')
 call s:HL('SpellLocal', 'special', 'none',       'bold,underline')
@@ -215,4 +215,10 @@ hi link pythonBuiltin Constant
 " 'MaxMEllon/vim-jsx-pretty'
 hi link jsxComponentName Statement
 hi link jsxTagName       Special
+
+" Neomake
+hi link NeomakeErrorSign ErrorMsg
+hi link NeomakeWarningSign WarningMsg
+hi link NeomakeMessageSign WarningMsg
+hi link NeomakeInfoSign Type
 " }}}
