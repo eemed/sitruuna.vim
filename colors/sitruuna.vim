@@ -229,18 +229,20 @@ hi link NeomakeVirtualtextMessage WarningMsg
 hi link NeomakeVirtualtextInfo Type
 
 " Fzf
-let g:fzf_colors =
-      \ { 'fg':    ['fg', 'NormalFloat'],
-      \ 'bg':      ['bg', 'NormalFloat'],
-      \ 'hl':      ['fg', 'Keyword', 'Keyword'],
-      \ 'fg+':     ['fg', 'Function'],
-      \ 'bg+':     ['bg', 'NormalFloat'],
-      \ 'hl+':     ['fg', 'Keyword'],
-      \ 'info':    ['fg', 'PreProc'],
-      \ 'border':  ['fg', 'Ignore'],
-      \ 'prompt':  ['fg', 'DiffAdded'],
-      \ 'pointer': ['fg', 'Function'],
-      \ 'marker':  ['fg', 'Keyword'],
-      \ 'spinner': ['fg', 'Label'],
-      \ 'header':  ['fg', 'Comment'] }
+if get(g:, 'sitruuna_fzf', 1) == 1
+  let g:fzf_colors =
+        \ { 'fg':    ['fg', 'NormalFloat'],
+        \ 'bg':      ['bg', 'NormalFloat'],
+        \ 'hl':      ['fg', 'Keyword', 'Keyword'],
+        \ 'fg+':     ['fg', 'Function'],
+        \ 'bg+':     ['bg', 'NormalFloat'],
+        \ 'hl+':     ['fg', 'Keyword'],
+        \ 'info':    ['fg', 'PreProc'],
+        \ 'border':  ['fg', 'Ignore'],
+        \ 'prompt':  ['fg', 'DiffAdded'],
+        \ 'pointer': ['fg', 'Function'],
+        \ 'marker':  ['fg', 'Keyword'],
+        \ 'spinner': ['fg', 'Label'],
+        \ 'header':  ['fg', 'Comment'] }
+endif
 " }}}

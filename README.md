@@ -2,7 +2,7 @@
 
 A fresh lemon inspired colorscheme for neovim
 
-![2020-01-07-221250_937x728_scrot](https://user-images.githubusercontent.com/30186515/71925977-f302e800-319a-11ea-9c37-244ad7608394.png)
+![2020-01-10-220814_998x767_scrot](https://user-images.githubusercontent.com/30186515/72183177-e7f7c400-33f5-11ea-8b89-972e322a42c3.png)
 
 ## Installation
 
@@ -15,6 +15,20 @@ Plug 'eemed/sitruuna.vim'
 
 and execute `PlugInstall`.
 
+## Configuration
+
+### g:sitruuna\_fzf
+
+Determines whether [fzf](https://github.com/junegunn/fzf.vim) colors are set.
+Can be set to `0` or `1`.
+
+Default: `1` (on)
+
+```vim
+" Don't set fzf colors
+let g:sitruuna_fzf = 0
+```
+
 ## Colors
 
 
@@ -24,8 +38,8 @@ and execute `PlugInstall`.
 |   lemon    |  #FAC03B  |
 |   darker   |  #101010  |
 | background |  #161616  |
-|  light_bg  |  #1D2021  |
-| lighter_bg |  #2D3032  |
+|  light\_bg  |  #1D2021  |
+| lighter\_bg |  #2D3032  |
 |  comment   |  #4c5356  |
 | selection  |  #2D3032  |
 |  special   |  #ffb354  |
