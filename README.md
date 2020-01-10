@@ -36,3 +36,4 @@ and execute `PlugInstall`.
 |    type    |  #65a9ff  |
 |  constant  |  #ca70d6  |
 |   error    |  #FB543F  |
+| statusline |  #ae7c5b  |
