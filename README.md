@@ -32,22 +32,22 @@ let g:sitruuna_fzf = 0
 ## Colors
 
 
-|   Usage    | color hex |
-|    ---     |    ---    |
-| foreground |  #f1f1f1  |
-|   lemon    |  #FAC03B  |
-|   darker   |  #101010  |
-| background |  #161616  |
+|    Usage    | color hex |
+|     ---     |    ---    |
+| foreground  |  #f1f1f1  |
+|    lemon    |  #FAC03B  |
+|   darker    |  #101010  |
+| background  |  #161616  |
 |  light\_bg  |  #1D2021  |
 | lighter\_bg |  #2D3032  |
-|  comment   |  #4c5356  |
-| selection  |  #2D3032  |
-|  special   |  #ffb354  |
-|  preproc   |  #a29bfe  |
-|  function  |  #94d0ff  |
-| identifier |  #f1f1f1  |
-|   string   |  #26c281  |
-|    type    |  #65a9ff  |
-|  constant  |  #ca70d6  |
-|   error    |  #FB543F  |
-| statusline |  #ae7c5b  |
+|   comment   |  #4c5356  |
+|  selection  |  #2D3032  |
+|   special   |  #ffb354  |
+|   preproc   |  #a29bfe  |
+|  function   |  #94d0ff  |
+| identifier  |  #f1f1f1  |
+|   string    |  #26c281  |
+|    type     |  #65a9ff  |
+|  constant   |  #ca70d6  |
+|    error    |  #FB543F  |
+| statusline  |  #34373a  |
