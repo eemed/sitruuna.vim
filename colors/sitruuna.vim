@@ -28,7 +28,7 @@ let s:col.string     = ['#26c281', 36]
 let s:col.type       = ['#65a9ff', 75]
 let s:col.constant   = ['#ca70d6', 170]
 let s:col.error      = ['#FB543F', 203]
-let s:col.statusline = ['#ae7c5b', 137]
+let s:col.statusline = ['#34373a', 137]
 let s:col.none       = ['NONE', 'NONE']
 " }}}
 
@@ -104,12 +104,12 @@ call s:HL('Question',        'foreground', 'none')
 call s:HL('WarningMsg',      'lemon',      'none')
 call s:HL('TabLine',         'foreground', 'light_bg', 'none')
 call s:HL('TabLineFill',     'foreground', 'light_bg', 'none')
-call s:HL('TabLineSel',      'background', 'special',  'bold')
+call s:HL('TabLineSel',      'foreground', 'statusline',  'bold')
 call s:HL('Cursor',          'none',       'foreground')
 call s:HL('CursorColumn',    'none',       'light_bg')
 call s:HL('CursorLineNr',    'special',    'darker')
 call s:HL('CursorLine',      'none',       'light_bg', 'none')
-call s:HL('StatusLine',      'statusline', 'background')
+call s:HL('StatusLine',      'statusline', 'foreground')
 call s:HL('StatusLineNC',    'light_bg',   'comment')
 call s:HL('Visual',          'none',       'selection')
 call s:HL('VisualNOS',       'foreground', 'background')
