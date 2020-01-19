@@ -45,7 +45,6 @@ let g:sitruuna_fzf = 0
 |   special   |  #ffb354  |
 |   preproc   |  #a29bfe  |
 |  function   |  #94d0ff  |
-| identifier  |  #f1f1f1  |
 |   string    |  #26c281  |
 |    type     |  #65a9ff  |
 |  constant   |  #ca70d6  |

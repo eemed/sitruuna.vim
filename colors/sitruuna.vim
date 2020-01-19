@@ -2,33 +2,32 @@
 " A fresh lemon inspired colorscheme for vim
 
 " Setup {{{
-set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
+set background=dark
 let g:colors_name="sitruuna"
 " }}}
 
 " Colors {{{
 let s:col            = {}
-let s:col.foreground = ['#f1f1f1', 231]
 let s:col.lemon      = ['#FAC03B', 220]
+let s:col.special    = ['#ffb354', 215]
+let s:col.preproc    = ['#a29bfe', 147]
+let s:col.function   = ['#94d0ff', 117]
+let s:col.foreground = ['#f1f1f1', 231]
+let s:col.statusline = ['#34373a', 137]
 let s:col.darker     = ['#101010', 232]
 let s:col.background = ['#161616', 233]
 let s:col.light_bg   = ['#1D2021', 236]
 let s:col.lighter_bg = ['#2D3032', 238]
 let s:col.comment    = ['#4c5356', 244]
 let s:col.selection  = ['#2D3032', 238]
-let s:col.special    = ['#ffb354', 215]
-let s:col.preproc    = ['#a29bfe', 147]
-let s:col.function   = ['#94d0ff', 117]
-let s:col.identifier = ['#f1f1f1', 231]
 let s:col.string     = ['#26c281', 36]
 let s:col.type       = ['#65a9ff', 75]
 let s:col.constant   = ['#ca70d6', 170]
 let s:col.error      = ['#FB543F', 203]
-let s:col.statusline = ['#34373a', 137]
 let s:col.none       = ['NONE', 'NONE']
 " }}}
 
@@ -84,7 +83,7 @@ call s:HL('Comment',         'comment',    'none')
 call s:HL('Conceal',         'error',      'none')
 call s:HL('Constant',        'constant',   'none')
 call s:HL('Error',           'error',      'none',       'none')
-call s:HL('Identifier',      'identifier', 'none')
+call s:HL('Identifier',      'none',       'none')
 call s:HL('Ignore',          'comment',    'none')
 call s:HL('PreProc',         'preproc',    'none')
 call s:HL('Special',         'special',    'none')
