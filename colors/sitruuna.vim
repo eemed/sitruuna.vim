@@ -244,4 +244,30 @@ if get(g:, 'sitruuna_fzf', 1) == 1
         \ 'spinner': ['fg', 'Label'],
         \ 'header':  ['fg', 'Comment'] }
 endif
+
+if has('nvim')
+  let g:terminal_color_0 = s:col.background[0]
+  let g:terminal_color_8 = s:col.lighter_bg[0]
+
+  let g:terminal_color_1 = s:col.error[0]
+  let g:terminal_color_9 = s:col.error[0]
+
+  let g:terminal_color_2 = s:col.string[0]
+  let g:terminal_color_10 = s:col.string[0]
+
+  let g:terminal_color_3 = s:col.lemon[0]
+  let g:terminal_color_11 = s:col.special[0]
+
+  let g:terminal_color_4 = s:col.type[0]
+  let g:terminal_color_12 = s:col.type[0]
+
+  let g:terminal_color_5 = s:col.constant[0]
+  let g:terminal_color_13 = s:col.preproc[0]
+
+  let g:terminal_color_6 = s:col.function[0]
+  let g:terminal_color_14 = s:col.function[0]
+
+  let g:terminal_color_7 = s:col.comment[0]
+  let g:terminal_color_15 = s:col.foreground[0]
+endif
 " }}}
