@@ -2,7 +2,7 @@
 
 A fresh lemon inspired colorscheme for neovim
 
-![2020-01-10-220814_998x767_scrot](https://user-images.githubusercontent.com/30186515/72183177-e7f7c400-33f5-11ea-8b89-972e322a42c3.png)
+![2020-01-24-125731_779x683_scrot](https://user-images.githubusercontent.com/30186515/73064177-466a7b00-3ea9-11ea-841e-b0dd47bfcc35.png)
 
 ## Installation
 
