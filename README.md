@@ -9,11 +9,20 @@ A fresh lemon inspired colorscheme for neovim
 ### vim-plug
 
 Add the following plugin to your `init.vim`:
-```
+```vim
 Plug 'eemed/sitruuna.vim'
 ```
 
 and execute `PlugInstall`.
+
+## Lightline
+
+To use the lightline theme set it up in your `init.vim`:
+```vim
+let g:lightline = {
+            \ 'colorscheme': 'sitruuna',
+            \ }
+```
 
 ## Configuration
 
@@ -39,11 +48,12 @@ let g:sitruuna_fzf = 0
 |   preproc   |  #a29bfe  |
 |  function   |  #a3db81  |
 | foreground  |  #d1d1d1  |
+|   fg\_alt   |  #a1a1a1  |
 | statusline  |  #34373a  |
-|   darker    |  #101010  |
+|   darker    |  #101212  |
 | background  |  #181a1b  |
-|  light\_bg  |  #1D2021  |
-| lighter\_bg |  #24292e  |
+|  light\_bg  |  #1d2023  |
+| lighter\_bg |  #242629  |
 |   comment   |  #4c5356  |
 |  selection  |  #2D3032  |
 |   string    |  #37ad82  |
