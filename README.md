@@ -50,7 +50,7 @@ let g:sitruuna_fzf = 0
 | foreground  |  #d1d1d1  |
 |   fg\_alt   |  #a1a1a1  |
 | statusline  |  #34373a  |
-|   darker    |  #101212  |
+|   darker    |  #131515  |
 | background  |  #181a1b  |
 |  light\_bg  |  #1d2023  |
 | lighter\_bg |  #242629  |

@@ -19,7 +19,7 @@ let s:col.function   = ['#a3db81', 117]
 let s:col.foreground = ['#d1d1d1', 188]
 let s:col.fg_alt     = ['#a1a1a1', 145]
 let s:col.statusline = ['#34373a', 137]
-let s:col.darker     = ['#101212', 232]
+let s:col.darker     = ['#131515', 232]
 let s:col.background = ['#181a1b', 233]
 let s:col.light_bg   = ['#1d2023', 236]
 let s:col.lighter_bg = ['#242629', 238]
@@ -75,7 +75,7 @@ endfunction
 call s:HL('Normal',          'foreground', 'background')
 call s:HL('NonText',         'comment',    'background')
 call s:HL('EndOfBuffer',     'lighter_bg')
-call s:HL('LineNr',          'comment',    'darker')
+call s:HL('LineNr',          'comment',    'light_bg')
 call s:HL('FoldColumn',      'lighter_bg', 'darker')
 call s:HL('Folded',          'comment',    'none')
 call s:HL('MatchParen',      'special',    'none',       'bold')
@@ -107,10 +107,10 @@ call s:HL('TabLineFill',     'foreground', 'light_bg',   'none')
 call s:HL('TabLineSel',      'foreground', 'statusline', 'bold')
 call s:HL('Cursor',          'none',       'foreground')
 call s:HL('CursorColumn',    'none',       'light_bg')
-call s:HL('CursorLineNr',    'special',    'darker')
+call s:HL('CursorLineNr',    'special',    'light_bg')
 call s:HL('CursorLine',      'none',       'light_bg',   'none')
 call s:HL('StatusLine',      'statusline', 'foreground')
-call s:HL('StatusLineNC',    'darker',     'comment')
+call s:HL('StatusLineNC',    'light_bg',     'comment')
 call s:HL('Visual',          'none',       'selection')
 call s:HL('VisualNOS',       'foreground', 'background')
 call s:HL('VertSplit',       'lighter_bg', 'lighter_bg')
