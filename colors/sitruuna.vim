@@ -9,7 +9,6 @@ endif
 set background=dark
 let g:colors_name="sitruuna"
 " }}}
-
 " Colors {{{
 let s:col            = {}
 let s:col.lemon      = ['#FAC03B', 220]
@@ -23,7 +22,7 @@ let s:col.darker     = ['#131515', 232]
 let s:col.background = ['#181a1b', 233]
 let s:col.light_bg   = ['#1d2023', 236]
 let s:col.lighter_bg = ['#242629', 238]
-let s:col.comment    = ['#4c5356', 244]
+let s:col.comment    = ['#5c6366', 244]
 let s:col.selection  = ['#2D3032', 238]
 let s:col.string     = ['#37ad82', 72]
 let s:col.type       = ['#7398dd', 104]
@@ -31,7 +30,6 @@ let s:col.constant   = ['#ca70d6', 170]
 let s:col.error      = ['#c15959', 131]
 let s:col.none       = ['NONE', 'NONE']
 " }}}
-
 " Highlighting Function from https://github.com/sjl/badwolf {{{
 function! s:HL(group, fg, ...)
     " Arguments: group, guifg, guibg, gui, guisp
@@ -70,21 +68,20 @@ function! s:HL(group, fg, ...)
     execute histring
 endfunction
 " }}}
-
 " Highlights {{{
 call s:HL('Normal',          'foreground', 'background')
 call s:HL('NonText',         'comment',    'background')
 call s:HL('EndOfBuffer',     'lighter_bg')
 call s:HL('LineNr',          'comment',    'light_bg')
 call s:HL('FoldColumn',      'lighter_bg', 'darker')
-call s:HL('Folded',          'comment',    'none')
+call s:HL('Folded',          'fg_alt',    'statusline')
 call s:HL('MatchParen',      'special',    'none',       'bold')
 call s:HL('SignColumn',      'lighter_bg', 'darker')
 call s:HL('Comment',         'comment',    'none')
 call s:HL('Conceal',         'error',      'none')
 call s:HL('Constant',        'constant',   'none')
 call s:HL('Error',           'error',      'none',       'none')
-call s:HL('Identifier',      'none',       'none')
+call s:HL('Identifier',      'function',       'none')
 call s:HL('Ignore',          'comment',    'none')
 call s:HL('PreProc',         'preproc',    'none')
 call s:HL('Special',         'special',    'none')
